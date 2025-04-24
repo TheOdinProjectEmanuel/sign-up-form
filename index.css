@@ -34,74 +34,96 @@ body {
 }
 
 .signup-container {
-  width: 100%;
-  height: 100%;
+  width: 55%;
+  height: 100vh;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .signup-container__flex {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: auto;
+  gap: 1.5rem;
+}
+
+.signup-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.signup-card h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2da096;
 }
 
 .signup-container__flex button {
-  margin: 1rem 0;
+  margin-top: 1rem;
   background-color: #2da096;
-  width: 10rem;
-  height: 2rem;
-  border-radius: 0.4rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  width: 100%;
+  max-width: 200px;
 }
 
 .signup-container__flex button:hover {
   background-color: #2da0967c;
 }
 
-.signup-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  padding: 1rem;
-  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
-}
-
-.input-container input {
-  width: 100%;
-  height: 2rem;
-}
-
 .signup-card .input-area {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
 }
 
 .input-area .input-container {
-  width: 45%;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-container label {
   text-transform: uppercase;
-  font-size: 0.8rem;
-  font-family: monospace;
+  font-size: 0.75rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #555;
 }
 
 .input-container input {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  border: 1px solid #0000004d;
-  border-radius: 0.4rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
   background-color: #2da09620;
-  caret-color: #2da096;
-  font-size: 1.1rem;
+  transition: border-color 0.3s ease;
 }
 
 .input-container input:focus {
+  border-color: #2da096;
   outline: none;
-  border: 1px solid #2da096 !important;
+}
+
+.signup-container__flex span {
+  text-align: center;
+  font-size: 0.9rem;
 }
