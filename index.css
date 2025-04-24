@@ -1,3 +1,25 @@
+:root {
+  color: #000000;
+  --primary: #2da096;
+  --base-bg: #e3e3e3;
+  --card-bg: #e1e1e1;
+  --label-color: #555555;
+  --input-color: #000000;
+  --input-border-color: #b0b0b0;
+  --default-margin: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #ffffff;
+    --base-bg: #161616;
+    --card-bg: #2f2f2f;
+    --label-color: #9b9b9b;
+    --input-color: #ffffff;
+    --input-border-color: #9e9e9e;
+  }
+}
+
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: 0;
@@ -21,7 +43,7 @@ body {
 }
 
 .image-container .logo span {
-  color: #ffffff;
+  color: var(--base-bg);
   font-size: 4rem;
   align-self: center;
 }
@@ -30,20 +52,20 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 1rem;
+  bottom: var(--default-margin);
 }
 
 .signup-container {
   width: 55%;
   height: 100vh;
-  background-color: #f9f9f9;
+  background-color: var(--base-bg);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .signup-container__flex {
-  background: white;
+  background: var(--card-bg);
   padding: 2rem 3rem;
   border-radius: 1rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -59,25 +81,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 1rem;
+  gap: var(--default-margin);
 }
 
 .signup-card h2 {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #2da096;
+  margin-bottom: var(--default-margin);
+  color: var(--primary);
 }
 
 .signup-container__flex button {
-  margin-top: 1rem;
-  background-color: #2da096;
+  margin-top: var(--default-margin);
+  background-color: var(--primary);
   border: none;
   border-radius: 0.5rem;
   padding: 0.75rem;
   font-size: 1rem;
   font-weight: bold;
-  color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
   align-self: center;
@@ -105,13 +126,14 @@ body {
   font-size: 0.75rem;
   margin-bottom: 0.3rem;
   font-weight: 600;
-  color: #555;
+  color: var(--label-color);
 }
 
 .input-container input {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: var(--input-color);
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--input-border-color);
   border-radius: 0.5rem;
   font-size: 1rem;
   background-color: #2da09620;
@@ -119,7 +141,7 @@ body {
 }
 
 .input-container input:focus {
-  border-color: #2da096;
+  border-color: var(--primary);
   outline: none;
 }
 
