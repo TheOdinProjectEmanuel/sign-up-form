@@ -34,13 +34,19 @@ body {
 }
 
 .signup-container {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: 100%;
 }
 
-.signup-container button {
+.signup-container__flex {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+
+.signup-container__flex button {
+  margin: 1rem 0;
   background-color: #2da096;
   width: 10rem;
   height: 2rem;
@@ -48,7 +54,7 @@ body {
   cursor: pointer;
 }
 
-.signup-container button:hover {
+.signup-container__flex button:hover {
   background-color: #2da0967c;
 }
 
@@ -56,7 +62,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
   margin: auto;
   padding: 1rem;
   box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
